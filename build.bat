@@ -1,0 +1,1 @@
+C:\gbdk\bin\lcc -Wl-yp0x143=0x80 -Wa-l -Wl-m -Wl-yt3 -Wl-yo4 -Wl-ya4 -o shenzhen-solitaire.gbc main.c
