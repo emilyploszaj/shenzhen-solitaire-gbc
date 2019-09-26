@@ -1,5 +1,6 @@
 # Shenzhen Solitaire GBC
 ![The Shenzhen Solitaire GBC Main Menu|height=576px](https://i.imgur.com/aZCn37W.png)
+
 Shenzhen Solitaire GBC is a Gameboy Color version of the solitaire game contained in the video game Shenzhen I/O by Zachtronics.
 
 ## Gameplay
@@ -10,6 +11,7 @@ Gameplay is designed to be nearly identical to the version included in Shenzhen 
 * No audio is present.
 
 ![The Shenzhen Solitaire GBC Main Menu|height=576px](https://i.imgur.com/jv0QK32.png)
+
 Other than these caveats, Shenzhen Solitaire GBC performs similarly to the original game. Cards will move across the screen if they can be placed in slots at the top right of the screen without consequence, wins are counted, and the art is recreated to the best of the Gameboy Color's ability.
 
 ## Controls
