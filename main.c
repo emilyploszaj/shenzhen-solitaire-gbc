@@ -21,6 +21,119 @@
 #define M_LLGREEN RGB(12, 24, 21)
 #define M_LGREEN RGB(1, 15, 10)
 
+//Music notes (All flats, no sharps)
+#define C0 0x8AF
+#define Db0 0xA70
+#define D0 0xC19
+#define Eb0 0xDAD
+#define E0 0xF25
+#define F0 0x08C
+#define Gb0 0x1DB
+#define G0 0x31A
+#define Ab0 0x447
+#define A0 0x562
+#define Bb0 0x66E
+#define B0 0x76A
+#define C1 0x858
+#define Db1 0x939
+#define D1 0xA0E
+#define Eb1 0xAD6
+#define E1 0xB93
+#define F1 0xC45
+#define Gb1 0xCEE
+#define G1 0xD8D
+#define Ab1 0xE23
+#define A1 0xEB1
+#define Bb1 0xF37
+#define B1 0xFB5
+#define C2 0x02C
+#define Db2 0x09D
+#define D2 0x107
+#define Eb2 0x16B
+#define E2 0x1CA
+#define F2 0x223
+#define Gb2 0x277
+#define G2 0x2C7
+#define Ab2 0x312
+#define A2 0x358
+#define Bb2 0x39B
+#define B2 0x3DA
+#define C3 0x416
+#define Db3 0x44E
+#define D3 0x483
+#define Eb3 0x4B5
+#define E3 0x4E5
+#define F3 0x511
+#define Gb3 0x53C
+#define G3 0x563
+#define Ab3 0x589
+#define A3 0x5AC
+#define Bb3 0x5CE
+#define B3 0x5ED
+#define C4 0x60B
+#define Db4 0x627
+#define D4 0x642
+#define Eb4 0x65B
+#define E4 0x672
+#define F4 0x689
+#define Gb4 0x69E
+#define G4 0x6B2
+#define Ab4 0x6C4
+#define A4 0x6D6
+#define Bb4 0x6E7
+#define B4 0x6F7
+#define C5 0x706
+#define Db5 0x714
+#define D5 0x721
+#define Eb5 0x72D
+#define E5 0x739
+#define F5 0x744
+#define Gb5 0x74F
+#define G5 0x759
+#define Ab5 0x762
+#define A5 0x76B
+#define Bb5 0x773
+#define B5 0x77B
+#define C6 0x783
+#define Db6 0x78A
+#define D6 0x790
+#define Eb6 0x797
+#define E6 0x79D
+#define F6 0x7A2
+#define Gb6 0x7A7
+#define G6 0x7AC
+#define Ab6 0x7B1
+#define A6 0x7B6
+#define Bb6 0x7BA
+#define B6 0x7BE
+#define C7 0x7C1
+#define Db7 0x7C5
+#define D7 0x7C8
+#define Eb7 0x7CB
+#define E7 0x7CE
+#define F7 0x7D1
+#define Gb7 0x7D4
+#define G7 0x7D6
+#define Ab7 0x7D9
+#define A7 0x7DB
+#define Bb7 0x7DD
+#define B7 0x7DF
+#define C8 0x7E1
+#define Db8 0x7E2
+#define D8 0x7E4
+#define Eb8 0x7E6
+#define E8 0x7E7
+#define F8 0x7E9
+#define Gb8 0x7EA
+#define G8 0x7EB
+#define Ab8 0x7EC
+#define A8 0x7ED
+#define Bb8 0x7EE
+#define B8 0x7EF
+
+#define MUS_MSIG(x) ((x & 0x700) >> 8)
+#define MUS_LSIG(x) (x & 0xFF)
+
 const UINT8 menu_tiles[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x03, 0x00, 0x03, 0x00, 0x03, 0x00, 0x01, 0x00, 0x00, 0x00,
@@ -338,10 +451,10 @@ const UINT8 instructions_tiles[] = {
 	0x00, 0x00, 0x00, 0x00, 0x8C, 0x8C, 0xD0, 0xD0, 0x88, 0x88, 0x84, 0x84, 0x58, 0x58, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xA8, 0xA8, 0x34, 0x34, 0xA4, 0xA4, 0xA4, 0xA4, 0xA4, 0xA4, 0x00, 0x00,
 	0x00, 0x00, 0x08, 0x08, 0x68, 0x68, 0x89, 0x89, 0x49, 0x49, 0x29, 0x29, 0xC4, 0xC4, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x91, 0x91, 0x59, 0x59, 0x51, 0x51, 0x51, 0x51, 0x88, 0x88, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x15, 0x15, 0x51, 0x51, 0x55, 0x55, 0x55, 0x55, 0xA4, 0xA4, 0x00, 0x00,
-	0x00, 0x00, 0x20, 0x20, 0x20, 0x20, 0xB0, 0xB1, 0x28, 0x28, 0x28, 0x28, 0xA8, 0xA9, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0xD3, 0x00, 0x18, 0x00, 0x91, 0x00, 0x52, 0x00, 0x8B, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x90, 0x90, 0x58, 0x58, 0x50, 0x50, 0x50, 0x50, 0x8A, 0x8A, 0x00, 0x00,
+	0x00, 0x7C, 0x10, 0xFE, 0x38, 0xFE, 0x38, 0xFE, 0x10, 0xFE, 0x10, 0xFE, 0x00, 0x7C, 0x00, 0x00,//Coin button
+	0x00, 0x7C, 0x18, 0xFE, 0x3C, 0xFE, 0x38, 0xFE, 0x2C, 0xFE, 0x3C, 0xFE, 0x00, 0x7C, 0x00, 0x00,//Bamboo button
+	0x00, 0x7C, 0x38, 0xFE, 0x28, 0xFE, 0x28, 0xFE, 0x28, 0xFE, 0x38, 0xFE, 0x00, 0x7C, 0x00, 0x00,//Character button
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x2A, 0x00, 0xB3, 0x00, 0xA2, 0x00, 0xA2, 0x00, 0xA1, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x40, 0x00, 0x00,
 	0x00, 0x00, 0x08, 0x08, 0x48, 0x48, 0x6C, 0x6C, 0x4A, 0x4A, 0x4A, 0x4A, 0x2A, 0x2A, 0x00, 0x00,
@@ -411,10 +524,10 @@ const UINT8 instructions_map[] = {
 	0, 120, 130, 120, 130, 120, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 113, 114, 113, 114, 113, 114, 0, 0, 0, 0, 0, 53, 54, 55, 56, 57, 58, 0, 0,
-	0, 115, 116, 115, 116, 115, 116, 0, 0, 0, 0, 0, 59, 60, 61, 62, 63, 64, 13, 0,
-	0, 117, 118, 117, 118, 117, 118, 0, 0, 0, 0, 0, 65, 66, 67, 68, 69, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 21, 22, 70, 71, 72, 73, 0,
-	0, 74, 75, 76, 77, 78, 79, 80, 0, 0, 0, 0, 81, 82, 83, 84, 85, 86, 87, 0,
+	0, 115, 116, 115, 116, 115, 116, 0, 0, 0, 83, 0, 59, 60, 61, 62, 63, 64, 13, 0,
+	0, 117, 118, 117, 118, 117, 118, 0, 0, 0, 84, 0, 65, 66, 67, 68, 69, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 0, 20, 21, 22, 70, 71, 72, 73, 0,
+	0, 74, 75, 76, 77, 78, 79, 80, 0, 0, 0, 0, 81, 82, 0, 0, 0, 0, 0, 0,
 	0, 88, 89, 90, 91, 92, 93, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 94, 95, 96, 97, 98, 99, 0, 0, 0, 0, 0, 100, 101, 102, 103, 104, 105, 0, 0,
 	0, 14, 9, 107, 11, 108, 109, 110, 0, 0, 0, 0, 106, 111, 112, 140, 141, 142, 0, 0,
@@ -427,13 +540,13 @@ const UINT8 instructions_att[] = {
 	5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
 	5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
 	5, 0, 0, 1, 0, 2, 0, 5, 5, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 3, 3, 3, 3, 4, 4, 5, 5, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+	5, 3, 3, 3, 3, 2, 2, 5, 5, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
 	5, 0, 0, 0, 1, 0, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
 	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
 	5, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+	5, 0, 0, 0, 0, 0, 0, 5, 5, 5, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+	5, 0, 0, 0, 0, 0, 0, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
 	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
 	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
 	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
@@ -446,8 +559,8 @@ const UWORD palettes[] = {
 	DGREEN, GRAY, WHITE, RED,//Top card segment red
 	DGREEN, GRAY, WHITE, GREEN,//Top card segment green
 	DGREEN, BLACK, WHITE, RED,//Card midsegment red/black
-	DGREEN, BLACK, WHITE, GREEN,//Card midsegment green (not needed, can be replaced if needed)
-	DGREEN, DGREEN, RED, WHITE,
+	DGREEN, BLACK, YELLOW, GRAY,//Highlighted dragon stacking button
+	DGREEN, DGREEN, RED, WHITE,//Text in instructions
 	BLUEGRAY, LBLUEGRAY, RED, WHITE,//Dashboard
 	BLUEGRAY, LBLUEGRAY, YELLOW, WHITE//Dashboard selected
 };
@@ -601,7 +714,11 @@ const UINT8 tiles[] = {
 	0x00, 0xFF, 0x00, 0x00, 0x24, 0x24, 0x55, 0x55, 0x75, 0x75, 0x45, 0x45, 0x32, 0x32, 0x00, 0x00,//Dashboard tiles
 	0x00, 0xFF, 0x00, 0x00, 0x46, 0x46, 0x48, 0x48, 0x4B, 0x4B, 0x49, 0x49, 0x86, 0x86, 0x00, 0x00,//Dashboard tiles
 	0x00, 0xFF, 0x00, 0x00, 0x62, 0x62, 0x15, 0x15, 0x35, 0x35, 0x55, 0x55, 0x75, 0x75, 0x00, 0x00,//Dashboard tiles
-	0x00, 0xFF, 0x00, 0x00, 0x88, 0x88, 0x54, 0x54, 0x5C, 0x5C, 0x50, 0x50, 0x4C, 0x4C, 0x00, 0x00 //Dashboard tiles
+	0x00, 0xFF, 0x00, 0x00, 0x88, 0x88, 0x54, 0x54, 0x5C, 0x5C, 0x50, 0x50, 0x4C, 0x4C, 0x00, 0x00,//Dashboard tiles
+	0x00, 0x7C, 0x10, 0xFE, 0x38, 0xFE, 0x38, 0xFE, 0x10, 0xFE, 0x10, 0xFE, 0x00, 0x7C, 0x00, 0x00,//Coin button
+	0x00, 0x7C, 0x18, 0xFE, 0x3C, 0xFE, 0x38, 0xFE, 0x2C, 0xFE, 0x3C, 0xFE, 0x00, 0x7C, 0x00, 0x00,//Bamboo button
+	0x00, 0x7C, 0x38, 0xFE, 0x28, 0xFE, 0x28, 0xFE, 0x28, 0xFE, 0x38, 0xFE, 0x00, 0x7C, 0x00, 0x00,//Character button
+	0x00, 0x28, 0x00, 0x82, 0x00, 0x00, 0x00, 0x82, 0x00, 0x00, 0x00, 0x82, 0x00, 0x28, 0x00, 0x00 //Button selection
 };
 //These are half segments of a tile that need to be ORed together to make a tile, it saves a lot of space
 const UINT8 win_tile_parts[] = {
@@ -646,9 +763,9 @@ const UWORD sprite_palettes2[] = {
 };
 const UINT8 board_map[] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 91, 92, 91, 92, 91, 92, 0, 91, 92, 0, 91, 92, 91, 92, 91, 92, 0, 0,
-	0, 0, 93, 94, 93, 94, 93, 94, 0, 93, 94, 0, 93, 94, 93, 94, 93, 94, 0, 0,
-	0, 0, 95, 96, 95, 96, 95, 96, 0, 95, 96, 0, 95, 96, 95, 96, 95, 96, 0, 0,
+	0, 0, 91, 92, 91, 92, 91, 92, 133, 91, 92, 0, 91, 92, 91, 92, 91, 92, 0, 0,
+	0, 0, 93, 94, 93, 94, 93, 94, 134, 93, 94, 0, 93, 94, 93, 94, 93, 94, 0, 0,
+	0, 0, 95, 96, 95, 96, 95, 96, 135, 95, 96, 0, 95, 96, 95, 96, 95, 96, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 91, 92, 91, 92, 91, 92, 91, 92, 91, 92, 91, 92, 91, 92, 91, 92, 0, 0,
 	0, 0, 93, 94, 93, 94, 93, 94, 93, 94, 93, 94, 93, 94, 93, 94, 93, 94, 0, 0,
@@ -666,8 +783,8 @@ const UINT8 board_map[] = {
 };
 const UINT8 board_att[] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -683,6 +800,72 @@ const UINT8 board_att[] = {
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+};
+const UINT16 chan2_notes[] = {
+	C3, C4, C3, C4, C3, Bb3, C3, Bb3, C3, G3, C3, G3, C3, Bb3, C3, Bb3,
+	C3, C4, C3, C4, C3, Bb3, C3, Bb3, C3, G3, C3, G3, C3, Bb3, C3, Bb3,
+	C3, C4, C3, C4, C3, Bb3, C3, Bb3, C3, G3, C3, G3, C3, Bb3, C3, 0
+};
+const UINT8 chan2_delays[] = {
+	60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 60, 100,
+	60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 60, 100,
+	60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 60, 100, 160
+};
+#define DK 0x40
+#define DS 0x30
+#define DS2 0x30
+#define DE 0xF0
+const UINT8 chan4_notes[] = {
+	DK, DE, DK, DE, DS, DK, DE, DK, DE, DS, DE,
+	DK, DE, DK, DE, DS, DK, DE, DK, DE, DS, DK, DE,
+	DK, DE, DK, DE, DS, DK, DE, DK, DE, DS, DE,
+	DK, DE, DK, DE, DS, DK, DE, DK, DE, DS, DK, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DE, DS2, DE,
+	DK, DE, DS2, DE, DK, DE, DS, DK, DE, DS2, DE, DK, DE, DS2, DE, DS2, DE, DS, DK, DE, DS2, DE, 0
+};
+const UINT8 chan4_delays[] = {
+	4, 26, 4, 6, 10, 4, 16, 4, 46, 10, 30,
+	4, 26, 4, 6, 10, 4, 16, 4, 46, 10, 4, 26,
+	4, 26, 4, 6, 10, 4, 16, 4, 46, 10, 30,
+	4, 26, 4, 6, 10, 4, 16, 4, 46, 10, 4, 26,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 10, 2, 18,
+	4, 16, 2, 8, 4, 6, 10, 4, 6, 2, 8, 4, 6, 2, 18, 2, 18, 10, 4, 6, 2, 18
 };
 //The deck of cards, gets shuffled every deal and drawn from to create the board
 UINT8 deck[] = {
@@ -728,7 +911,7 @@ UINT8 menu_flash_att[] = {
 };
 //Wincount tilemap
 UINT8 wincount_map[] = {
-	133, 134, 135, 136, 103, 104, 105
+	137, 138, 139, 140, 103, 104, 105
 };
 //Dashboard text tilemap
 UINT8 dashboard_map[] = {
@@ -773,11 +956,13 @@ UINT8 sprite_layer_count;
 //Current sprite being moved (loop variable)
 UINT8 current_sprite;
 //Position of the in game cursor, cursor_y == 0 represents the hold and suit stack layer, y > 0 represents the card stacks
-UINT8 cursor_x = 0, cursor_y = 5;
+UINT8 cursor_x = 0, cursor_y = 5, cursor_button_y = 0;
 //Number of cards in current stack or zero if not carrying a stack
 UINT8 carry_card_count;
 //Stack to return cards to
 UINT8 return_stack;
+//Bitflag of dragons that can be stacked (Character, Bamboo, Coin, from most to least significant bit)
+UINT8 stackable_dragons;
 //If the game is won and needs to be restarted
 UINT8 game_won;
 //Save data
@@ -791,6 +976,13 @@ UINT8 *RAM_ptr6 = (UINT8 *) 0xa006;
 UINT8 *RAM_ptr7 = (UINT8 *) 0xa007;
 UINT8 *RAM_ptr8 = (UINT8 *) 0xa008;
 UINT32 *RAM_ptr32 = (UINT32 *) 0xa010;
+//Sound information
+UINT16 *chan2_note_index = chan2_notes;
+UINT8 *chan2_delay_index = chan2_delays;
+UINT8 chan2_delay = 0;
+UINT8 *chan4_note_index = chan4_notes;
+UINT8 *chan4_delay_index = chan4_delays;
+UINT8 chan4_delay = 0;
 //Moves all sprites to a specified location with proper offsets based on sprite_layer_count
 void move_sprites(UINT8, UINT8);
 //Slightly misleading, returns nothing, prepares card graphical information for use in several areas
@@ -807,10 +999,14 @@ void set_stacks(UINT8, UINT8, UINT8);
 void deal();
 //Sets up the cursor to be used as the primary set of sprites
 void init_cursor();
+//Sets up the mini cursor for the dragon stacking buttons
+void init_mini_cursor();
 //Moves sprites to place cursor where it belongs
 void move_cursor();
 //Checks to see if top layer cards (the rose, numbered cards that can be stacked in the suit stacks without consequence) can be moved and performs the actions
 void check_automove();
+//Checks the board for stackable dragons
+void update_dragon_buttons();
 //Tests to see if card a can be stacked on card b
 UINT8 can_stack(UINT8, UINT8);
 //Pick up a stack of cards if possible
@@ -825,6 +1021,8 @@ void stack_dragons();
 void update_win_counter();
 //Transfers context to the dashboard
 void use_dashboard();
+//Gets run 60 times per frame on vbl (used for sound)
+void vbl_handler();
 //Show instructions
 void show_instructions();
 //Load save data if available
@@ -838,9 +1036,10 @@ void main(){
 	SHOW_SPRITES;
 	SHOW_BKG;
 	//Sound stuff
-	NR52_REG = 0x8F;
-	NR51_REG = 0x11;
+	NR52_REG = 0x80;
+	NR51_REG = 0xFF;
 	NR50_REG = 0x77;
+	add_VBL(vbl_handler);
 	set_bkg_palette(0, 4, menu_palettes);
 	set_bkg_data(0, 192, menu_tiles);
 	VBK_REG = 1;
@@ -856,6 +1055,10 @@ void main(){
 	}
 	VBK_REG = 1;
 	for(i = 0; i < 3; i ++){
+		NR11_REG = 0x10;
+		NR12_REG = 0xF1;
+		NR13_REG = MUS_LSIG(F3);
+		NR14_REG = 0x80 | MUS_MSIG(F3);
 		set_bkg_tiles(7, 11, 6, 1, menu_flash_att);
 		for(j = 0; j < 6; j++){
 			wait_vbl_done();
@@ -876,8 +1079,8 @@ void main(){
 	}
 	set_bkg_palette(0, 8, extra_palettes);
 	//Initialize background tiles
-	set_bkg_data(0, 133, tiles);
-	set_sprite_data(0, 133, tiles);
+	set_bkg_data(0, 137, tiles);
+	set_sprite_data(0, 137, tiles);
 	//Set up background
 	wait_vbl_done();
 	VBK_REG = 1;
@@ -902,8 +1105,14 @@ void main(){
 					cursor_x = 1;
 				}
 				if(cursor_y == 0){
-					if(cursor_x == 5) cursor_x = 2;
-					else cursor_x--;
+					if(cursor_x == 3) init_cursor();
+					if(cursor_x == 5){
+						if(carry_card_count == 0){
+							cursor_x = 3;
+							cursor_button_y = 1;
+							init_mini_cursor();
+						}else cursor_x = 2;
+					}else cursor_x--;
 				}else{
 					cursor_x--;
 					cursor_y = stack_heights[cursor_x];
@@ -918,8 +1127,16 @@ void main(){
 					cursor_x = 6;
 				}
 				if(cursor_y == 0){
-					if(cursor_x == 2) cursor_x = 5;
-					else cursor_x++;
+					if(cursor_x == 3){
+						cursor_x = 5;
+						init_cursor();
+					}else if(cursor_x == 2){
+						if(carry_card_count == 0){
+							cursor_x = 3;
+							cursor_button_y = 1;
+							init_mini_cursor();
+						}else cursor_x = 5;
+					}else cursor_x++;
 				}else{
 					cursor_x++;
 					cursor_y = stack_heights[cursor_x];
@@ -939,6 +1156,11 @@ void main(){
 					}
 					move_cursor();
 				}
+			}else if(cursor_y == 0 && cursor_x == 3){
+				if(cursor_button_y > 0){
+					cursor_button_y--;
+					move_cursor();
+			}
 			}
 		}else if((current_joypad & J_DOWN) != 0 && (last_joypad & J_DOWN) == 0){
 			if(cursor_y != 0){
@@ -949,10 +1171,17 @@ void main(){
 					cursor_y++;
 					move_cursor();
 				}
+			}else if(cursor_x == 3){
+				if(cursor_button_y < 2){
+					cursor_button_y++;
+					move_cursor();
+				}
 			}
 		}else if((current_joypad & J_A) != 0 && (last_joypad & J_A) == 0){
 			if(carry_card_count == 0){
-				grab_cards();
+				if(cursor_x == 3 && cursor_y == 0){
+					stack_dragons();
+				}else grab_cards();
 			}else{
 				place_cards();
 			}
@@ -962,21 +1191,22 @@ void main(){
 			}
 		}else if((current_joypad & J_SELECT) != 0 && (last_joypad & J_SELECT) == 0){
 			if(cursor_y == 0){
+				if(cursor_x == 3) init_cursor();
 				cursor_y = stack_heights[cursor_x];
 				if(cursor_y == 0) cursor_y = 1;
 				if(carry_card_count != 0 && stack_heights[cursor_x] != 0) cursor_y++;
 			}else if(carry_card_count < 2){
 				cursor_y = 0;
-				if(cursor_x == 3) cursor_x = 2;
-				else if(cursor_x == 4) cursor_x = 5;
+				if(cursor_x == 3){
+					if(carry_card_count == 0){
+						cursor_button_y = 1;
+						init_mini_cursor();
+					}else cursor_x = 2;
+				}else if(cursor_x == 4) cursor_x = 5;
 			}
 			move_cursor();
 		}else if((current_joypad & J_START) != 0 && (last_joypad & J_START) == 0){
-			if(cursor_y == 0 && cursor_x < 3 && carry_card_count == 0){
-				stack_dragons();
-			}else if((cursor_y != 0 || cursor_x > 2) && carry_card_count == 0){
-				use_dashboard();
-			}
+			if(carry_card_count == 0) use_dashboard();
 		}
 		last_joypad = current_joypad;
 		random_seed += current_joypad + 1;
@@ -1002,7 +1232,7 @@ void get_card(UINT8 card, UINT8 stacked){
 	current_card_att[1] = suit;
 	current_card_att[4] = suit;
 	current_card_att[5] = suit;
-	if(suit == 2) suit = 4;
+	if(suit == 2) suit = 2;
 	else if(suit == 0) suit = 3;
 	current_card_att[2] = suit;
 	current_card_att[3] = suit;
@@ -1102,9 +1332,12 @@ void restart(){
 	}
 	VBK_REG = 0;
 	set_bkg_tiles(0, 0, 20, 18, board_map);
+	VBK_REG = 1;
+	set_bkg_tiles(0, 0, 20, 18, board_att);
 	game_won = 0;
 	deal();
 	check_automove();
+	update_dragon_buttons();
 	carry_card_count = 0;
 	set_sprite_palette(0, 6, sprite_palettes);
 	cursor_x = 0;
@@ -1183,6 +1416,22 @@ void init_cursor(){
 	set_sprite_tile(5, empty_slot_map[5]);
 	move_cursor();
 }
+void init_mini_cursor(){
+	sprite_layer_count = 3;
+	set_sprite_prop(0, 5);
+	set_sprite_prop(1, 5);
+	set_sprite_prop(2, 5);
+	set_sprite_prop(3, 5);
+	set_sprite_prop(4, 5);
+	set_sprite_prop(5, 5);
+	set_sprite_tile(0, 136);
+	set_sprite_tile(1, 0);
+	set_sprite_tile(2, 0);
+	set_sprite_tile(3, 0);
+	set_sprite_tile(4, 0);
+	set_sprite_tile(5, 0);
+	move_cursor();
+}
 void move_cursor(){
 	if(carry_card_count > 0){
 		if(cursor_y < 2){
@@ -1194,7 +1443,9 @@ void move_cursor(){
 		set_sprite_tile(1, current_card[1]);
 	}
 	if(cursor_y == 0){
-		if(cursor_x == 3) move_sprites(80, 16);
+		if(cursor_x == 3){
+			move_sprites(72, 24 + (cursor_button_y << 3));
+		}
 		else move_sprites(24 + (cursor_x << 4), 24);
 	}else{
 		move_sprites(24 + (cursor_x << 4), 48 + (cursor_y << 3));
@@ -1360,8 +1611,58 @@ void check_automove(){
 	#undef dest_x
 	#undef dest_y
 }
+void update_dragon_buttons(){
+	#define coin_count a
+	#define bamboo_count b
+	#define character_count c
+	#define dragon_flags d
+	coin_count = 0;
+	bamboo_count = 0;
+	character_count = 0;
+	dragon_flags = 0;
+	for(i = 0; i < 3; i++){
+		if(free_slots[i] == 0xFF){
+			dragon_flags = 7;
+		}else if(free_slots[i] == 0x09){
+			dragon_flags |= 4;
+			character_count++;
+		}else if(free_slots[i] == 0x19){
+			dragon_flags |= 1;
+			coin_count++;
+		}else if(free_slots[i] == 0x29){
+			dragon_flags |= 2;
+			bamboo_count++;
+		}
+	}
+	for(i = 0; i < 8; i++){
+		e = get_stacks(i, stack_heights[i] - 1);
+		if(e == 0x09 && stack_heights[i] > 0) character_count++;
+		else if(e == 0x19 && stack_heights[i] > 0) coin_count++;
+		else if(e == 0x29 && stack_heights[i] > 0) bamboo_count++;
+	}
+	stackable_dragons = 0;
+	if(dragon_flags & 1 && coin_count > 3) stackable_dragons |= 1;
+	if(dragon_flags & 2 && bamboo_count > 3) stackable_dragons |= 2;
+	if(dragon_flags & 4 && character_count > 3) stackable_dragons |= 4;
+	VBK_REG = 1;
+	i = 4;
+	j = 1;
+	if(stackable_dragons & 1) set_bkg_tiles(8, 1, 1, 1, &i);
+	else set_bkg_tiles(8, 1, 1, 1, &j);
+	j = 2;
+	if(stackable_dragons & 2) set_bkg_tiles(8, 2, 1, 1, &i);
+	else set_bkg_tiles(8, 2, 1, 1, &j);
+	j = 0;
+	if(stackable_dragons & 4) set_bkg_tiles(8, 3, 1, 1, &i);
+	else set_bkg_tiles(8, 3, 1, 1, &j);
+	VBK_REG = 0;
+	#undef coin_count
+	#undef bamboo_count
+	#undef character_count
+	#undef dragon_flags
+}
 UINT8 can_stack(UINT8 a, UINT8 b){
-	if((a & 48) != (b & 48) && (a & 15) + 1 == (b & 15) && (b & 15) != 0x09) return 1;
+	if((a & 48) != (b & 48) && (a & 15) + 1 == (b & 15) && (b & 15) != 0x09 && a != 0x3A && b != 0x3A) return 1;
 	return 0;
 }
 void grab_cards(){
@@ -1472,6 +1773,7 @@ void place_cards(){
 		set_sprite_tile(i, 0);
 	}
 	check_automove();
+	update_dragon_buttons();
 	init_cursor();
 }
 void return_cards(){
@@ -1512,69 +1814,74 @@ void return_cards(){
 	init_cursor();
 }
 void stack_dragons(){
-	#define dragon_count k
+	#define free_slot_dest k
 	#define dragon_card l
 	#define sprite_x a
 	#define sprite_y b
 	#define dest_x c
 	#define dest_y d
-	if((free_slots[cursor_x] & 15) == 0x09){
-		dragon_card = free_slots[cursor_x];
-		dragon_count = 0;
-		for(i = 0; i < 8; i++){
-			if(get_stacks(i, stack_heights[i] - 1) == dragon_card && stack_heights[i] > 0) dragon_count++;
-		}
-		for(i = 0; i < 3; i++){
-			if(dragon_card == free_slots[i]) dragon_count++;
-		}
-		if(dragon_count == 4){
-			for(i = 0; i < 3; i++){
-				if(dragon_card == free_slots[i]){
-					if(i == cursor_x) continue;
-					sprite_x = 24 + ((INT16)i << 4);
-					sprite_y = 24;
-					dest_x = 24 + ((INT16)cursor_x << 4);
-					dest_y = 24;
-					get_card(dragon_card);
-					VBK_REG = 1;
-					set_bkg_tiles(2 + (i << 1), 1, 2, 3, empty_slot_att);
-					VBK_REG = 0;
-					set_bkg_tiles(2 + (i << 1), 1, 2, 3, empty_slot_map);
-					move_card(dragon_card);
-					free_slots[i] = 0xFF;
-				}
-			}
-			for(i = 0; i < 8; i++){
-				if(stack_heights[i] > 0 && get_stacks(i, stack_heights[i] - 1) == dragon_card){
-					sprite_x = 24 + ((INT16)i << 4);
-					p = (stack_heights[i] << 3);//Why are these three lines like this?
-					p = p + 48;//Well the compiler is very mean and will not let me write it any different
-					sprite_y = (UINT16) p;//Thanks for coming to my ted talk
-					dest_x = 24 + ((INT16)cursor_x << 4);
-					dest_y = 24;
-					stack_heights[i]--;
-					get_card(get_stacks(i, stack_heights[i] - 1), stack_heights[i] > 1);
-					VBK_REG = 1;
-					set_bkg_tiles(2 + (i << 1), 7 + stack_heights[i], 2, 1, empty_slot_att);
-					if(stack_heights[i] == 0) set_bkg_tiles(2 + (i << 1), 5, 2, 3, empty_slot_att);
-					else set_bkg_tiles(2 + (i << 1), 4 + stack_heights[i], 2, 3, current_card_att);
-					VBK_REG = 0;
-					set_bkg_tiles(2 + (i << 1), 7 + stack_heights[i], 2, 1, empty_slot_att);
-					if(stack_heights[i] == 0) set_bkg_tiles(2 + (i << 1), 5, 2, 3, empty_slot_map);
-					else set_bkg_tiles(2 + (i << 1), 4 + stack_heights[i], 2, 3, current_card);
-					move_card(dragon_card);
-				}
-			}
-			free_slots[cursor_x] = 0xFE;
-			VBK_REG = 1;
-			set_bkg_tiles(2 + (cursor_x << 1), 1, 2, 3, card_back_att);
-			VBK_REG = 0;
-			set_bkg_tiles(2 + (cursor_x << 1), 1, 2, 3, card_back_map);
-			check_automove();
-			init_cursor();
+	if((stackable_dragons & (1 << cursor_button_y)) == 0) return;
+	if(cursor_button_y == 0) dragon_card = 0x19;
+	else if(cursor_button_y == 1) dragon_card = 0x29;
+	else if(cursor_button_y == 2) dragon_card = 0x09;
+	free_slot_dest = 9;
+	for(i = 0; i < 3; i++){
+		if(dragon_card == free_slots[i]){
+			free_slot_dest = i;
+			break;
+		}else if(free_slots[i] == 0xFF){
+			free_slot_dest = i;
+			break;
 		}
 	}
-	#undef dragon_count
+	if(free_slot_dest != 9){
+		for(i = 0; i < 3; i++){
+			if(dragon_card == free_slots[i]){
+				if(i == free_slot_dest) continue;
+				sprite_x = 24 + ((INT16)i << 4);
+				sprite_y = 24;
+				dest_x = 24 + ((INT16)free_slot_dest << 4);
+				dest_y = 24;
+				get_card(dragon_card);
+				VBK_REG = 1;
+				set_bkg_tiles(2 + (i << 1), 1, 2, 3, empty_slot_att);
+				VBK_REG = 0;
+				set_bkg_tiles(2 + (i << 1), 1, 2, 3, empty_slot_map);
+				move_card(dragon_card);
+				free_slots[i] = 0xFF;
+			}
+		}
+		for(i = 0; i < 8; i++){
+			if(stack_heights[i] > 0 && get_stacks(i, stack_heights[i] - 1) == dragon_card){
+				sprite_x = 24 + ((INT16)i << 4);
+				p = (stack_heights[i] << 3);//Why are these three lines like this?
+				p = p + 48;//Well the compiler is very mean and will not let me write it any different
+				sprite_y = (UINT16) p;//Thanks for coming to my ted talk
+				dest_x = 24 + ((INT16)free_slot_dest << 4);
+				dest_y = 24;
+				stack_heights[i]--;
+				get_card(get_stacks(i, stack_heights[i] - 1), stack_heights[i] > 1);
+				VBK_REG = 1;
+				set_bkg_tiles(2 + (i << 1), 7 + stack_heights[i], 2, 1, empty_slot_att);
+				if(stack_heights[i] == 0) set_bkg_tiles(2 + (i << 1), 5, 2, 3, empty_slot_att);
+				else set_bkg_tiles(2 + (i << 1), 4 + stack_heights[i], 2, 3, current_card_att);
+				VBK_REG = 0;
+				set_bkg_tiles(2 + (i << 1), 7 + stack_heights[i], 2, 1, empty_slot_att);
+				if(stack_heights[i] == 0) set_bkg_tiles(2 + (i << 1), 5, 2, 3, empty_slot_map);
+				else set_bkg_tiles(2 + (i << 1), 4 + stack_heights[i], 2, 3, current_card);
+				move_card(dragon_card);
+			}
+		}
+		free_slots[free_slot_dest] = 0xFE;
+		VBK_REG = 1;
+		set_bkg_tiles(2 + (free_slot_dest << 1), 1, 2, 3, card_back_att);
+		VBK_REG = 0;
+		set_bkg_tiles(2 + (free_slot_dest << 1), 1, 2, 3, card_back_map);
+		check_automove();
+		update_dragon_buttons();
+		init_mini_cursor();
+	}
+	#undef free_slot_dest
 	#undef dragon_card
 	#undef sprite_x
 	#undef sprite_y
@@ -1609,7 +1916,7 @@ void update_win_counter(){
 			win_tile_construction[v + (UINT16)j] = w | x;
 		}
 	}
-	set_bkg_data(133, 4, win_tile_construction);
+	set_bkg_data(137, 4, win_tile_construction);
 }
 void use_dashboard(){
 	move_sprites(210, 0);
@@ -1657,12 +1964,17 @@ void use_dashboard(){
 					show_instructions();
 					update_win_counter();
 					set_bkg_palette(0, 8, palettes);
-					init_cursor();
+					if(cursor_x == 3 && cursor_y == 0){
+						init_mini_cursor();
+					}else init_cursor();
 				}
 				return;
 			}else if(((current_joypad & J_B) != 0 && (last_joypad & J_B) == 0) || ((current_joypad & J_START) != 0 && (last_joypad & J_START) == 0)){
 				set_win_tiles(8, 0, 14, 1, dashboard_att);
-				init_cursor();
+				VBK_REG = 0;
+				if(cursor_x == 3 && cursor_y == 0){
+					init_mini_cursor();
+				}else init_cursor();
 				return;
 			}
 			last_joypad = current_joypad;
@@ -1697,7 +2009,33 @@ void show_instructions(){
 	move_win(7, 200);
 	set_bkg_palette(0, 4, extra_palettes);
 	set_bkg_palette(4, 4, extra_palettes);
-	set_bkg_data(0, 133, tiles);
+	set_bkg_data(0, 137, tiles);
+}
+void vbl_handler(){
+	if(chan2_delay == 0){
+		NR21_REG = 0x10;
+		NR22_REG = 0xF3;
+		NR23_REG = MUS_LSIG(*chan2_note_index);
+		NR24_REG = 0x80 | MUS_MSIG(*(chan2_note_index++));
+		chan2_delay = *(chan2_delay_index++);
+		if(*chan2_note_index == 0){
+			chan2_note_index = chan2_notes;
+			chan2_delay_index = chan2_delays;
+		}
+	}
+	if(chan4_delay == 0){
+		NR41_REG = 0x01;
+		NR42_REG = 0xF1;
+		NR43_REG = *(chan4_note_index++);
+		NR44_REG = 0x80;
+		chan4_delay = *(chan4_delay_index++);
+		if(*chan4_note_index == 0){
+			chan4_note_index = chan4_notes;
+			chan4_delay_index = chan4_delays;
+		}
+	}
+	chan2_delay--;
+	chan4_delay--;
 }
 void save_game(){
 	ENABLE_RAM_MBC1;
