@@ -9,7 +9,7 @@ Gameplay is designed to be nearly identical to the version included in Shenzhen 
 * Cards are not moved with a mouse, rather, they are selected and picked up with a cursor controlled by the buttons on the Gameboy Color.
 * Instructions are reworded to save space while conveying the same idea.
 
-![The Shenzhen Solitaire GBC Gameplay Screen|height=576px](https://i.imgur.com/5qJLPGd.png)
+![The Shenzhen Solitaire GBC Gameplay Screen|height=576px](https://i.imgur.com/P3BHryP.png)
 
 Other than these caveats, Shenzhen Solitaire GBC performs similarly to the original game. Cards will move across the screen if they can be placed in slots at the top right of the screen without consequence, wins are counted, and the art is recreated to the best of the Gameboy Color's ability.
 
