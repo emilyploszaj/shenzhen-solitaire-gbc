@@ -137,7 +137,7 @@
 
 #define MUS_MSIG(x) ((x & 0x700) >> 8)
 #define MUS_LSIG(x) (x & 0xFF)
-
+/*
 const UINT8 logo_tiles[] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xE4, 0xFF, 0xC0, 0xFF, 0xC0,
@@ -192,7 +192,7 @@ const UINT8 logo_map[] = {
 	25, 26, 27, 27, 28, 20, 29, 30, 23, 0, 0, 24, 0, 0,
 	31, 32, 33, 34, 0, 20, 0, 0, 23, 0, 0, 35, 36, 37,
 	0, 38, 27, 39, 0, 40, 0, 0, 41, 0, 0, 42, 43, 4
-};
+};*/
 const UINT8 menu_tiles[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x03, 0x00, 0x03, 0x00, 0x03, 0x00, 0x01, 0x00, 0x00, 0x00,
@@ -388,44 +388,22 @@ const UINT8 menu_tiles[] = {
 	0x00, 0x00, 0xA0, 0xA0, 0xA0, 0xA0, 0xA0, 0xA0, 0xC0, 0xC0, 0xA0, 0xA0, 0xA0, 0xA0, 0x00, 0x00
 };
 const UINT8 menu_map[] = {
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 0,
-	0, 1, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 0,
-	0, 0, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 0,
-	0, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 0,
-	0, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 0,
-	0, 0, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 93, 94, 95, 101, 0, 0,
-	0, 0, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 104, 105, 106, 107, 108, 109, 0, 0,
-	0, 0, 112, 113, 114, 115, 116, 0, 117, 118, 119, 120, 121, 117, 122, 121, 123, 124, 0, 0,
-	0, 0, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 131, 136, 137, 138, 139, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 140, 141, 142, 143, 144, 145, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 0, 0, 0, 0,
-	0, 0, 160, 161, 162, 163, 149, 164, 165, 166, 167, 168, 169, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 170, 171, 172, 173, 174, 175, 147, 148, 149, 176, 177, 178, 179, 180, 181, 0, 0, 0,
-	0, 0, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
-const UINT8 menu_att[] = {
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-	2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+	1, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35,
+	0, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52,
+	53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
+	71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88,
+	0, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 93, 94, 95, 101, 0,
+	0, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 104, 105, 106, 107, 108, 109, 0,
+	0, 112, 113, 114, 115, 116, 0, 117, 118, 119, 120, 121, 117, 122, 121, 123, 124, 0,
+	0, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 131, 136, 137, 138, 139, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 140, 141, 142, 143, 144, 145, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 0, 0, 0,
+	0, 160, 161, 162, 163, 149, 164, 165, 166, 167, 168, 169, 0, 0, 0, 0, 0, 0,
+	0, 170, 171, 172, 173, 174, 175, 147, 148, 149, 176, 177, 178, 179, 180, 181, 0, 0,
+	0, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 0, 0, 0, 0, 0, 0, 0
 };
 const UINT8 instructions_tiles[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -573,44 +551,36 @@ const UINT8 instructions_tiles[] = {
 	0x00, 0x00, 0x00, 0x00, 0x48, 0x48, 0x48, 0x48, 0x48, 0x48, 0x48, 0x48, 0x32, 0x32, 0x00, 0x00
 };
 const UINT8 instructions_map[] = {
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 1, 2, 3, 4, 5, 6, 7, 0, 124, 119, 0, 8, 9, 10, 11, 12, 13, 0, 0,
-	0, 14, 9, 15, 16, 17, 18, 19, 0, 123, 131, 0, 20, 21, 22, 23, 24, 0, 0, 0,
-	0, 25, 26, 27, 28, 29, 0, 0, 0, 122, 131, 0, 30, 31, 32, 33, 34, 35, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 121, 131, 0, 36, 37, 38, 39, 40, 41, 42, 0,
-	0, 125, 119, 125, 119, 125, 119, 0, 0, 132, 133, 0, 43, 44, 45, 46, 47, 48, 49, 0,
-	0, 134, 135, 136, 137, 138, 139, 0, 0, 120, 126, 0, 50, 51, 52, 0, 0, 0, 0, 0,
-	0, 120, 130, 120, 130, 120, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 113, 114, 113, 114, 113, 114, 0, 0, 0, 0, 0, 53, 54, 55, 56, 57, 58, 0, 0,
-	0, 115, 116, 115, 116, 115, 116, 0, 0, 0, 83, 0, 59, 60, 61, 62, 63, 64, 13, 0,
-	0, 117, 118, 117, 118, 117, 118, 0, 0, 0, 84, 0, 65, 66, 67, 68, 69, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 0, 20, 21, 22, 70, 71, 72, 73, 0,
-	0, 74, 75, 76, 77, 78, 79, 80, 0, 0, 0, 0, 81, 82, 0, 0, 0, 0, 0, 0,
-	0, 88, 89, 90, 91, 92, 93, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 94, 95, 96, 97, 98, 99, 0, 0, 0, 0, 0, 100, 101, 102, 103, 104, 105, 0, 0,
-	0, 14, 9, 107, 11, 108, 109, 110, 0, 0, 0, 0, 106, 111, 112, 140, 141, 142, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+	1, 2, 3, 4, 5, 6, 7, 0, 124, 119, 0, 8, 9, 10, 11, 12, 13, 0,
+	14, 9, 15, 16, 17, 18, 19, 0, 123, 131, 0, 20, 21, 22, 23, 24, 0, 0,
+	25, 26, 27, 28, 29, 0, 0, 0, 122, 131, 0, 30, 31, 32, 33, 34, 35, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 121, 131, 0, 36, 37, 38, 39, 40, 41, 42,
+	125, 119, 125, 119, 125, 119, 0, 0, 132, 133, 0, 43, 44, 45, 46, 47, 48, 49,
+	134, 135, 136, 137, 138, 139, 0, 0, 120, 126, 0, 50, 51, 52, 0, 0, 0, 0,
+	120, 130, 120, 130, 120, 130, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	113, 114, 113, 114, 113, 114, 0, 0, 0, 0, 0, 53, 54, 55, 56, 57, 58, 0,
+	115, 116, 115, 116, 115, 116, 0, 0, 0, 83, 0, 59, 60, 61, 62, 63, 64, 13,
+	117, 118, 117, 118, 117, 118, 0, 0, 0, 84, 0, 65, 66, 67, 68, 69, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 0, 20, 21, 22, 70, 71, 72, 73,
+	74, 75, 76, 77, 78, 79, 80, 0, 0, 0, 0, 81, 82, 0, 0, 0, 0, 0,
+	88, 89, 90, 91, 92, 93, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	94, 95, 96, 97, 98, 99, 0, 0, 0, 0, 0, 100, 101, 102, 103, 104, 105, 0,
+	14, 9, 107, 11, 108, 109, 110, 0, 0, 0, 0, 106, 111, 112, 140, 141, 142, 0
 };
 const UINT8 instructions_att[] = {
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 1, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 2, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 0, 0, 1, 0, 2, 0, 5, 5, 3, 3, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 3, 3, 3, 3, 2, 2, 5, 5, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 0, 0, 0, 1, 0, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 0, 0, 0, 0, 0, 0, 5, 5, 5, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 0, 0, 0, 0, 0, 0, 5, 5, 5, 1, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 0, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
-	5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5
+	5, 5, 5, 5, 5, 5, 5, 5, 2, 0,
+	5, 5, 5, 5, 5, 5, 5, 5, 1, 0,
+	5, 5, 5, 5, 5, 5, 5, 5, 2, 0,
+	5, 5, 5, 5, 5, 5, 5, 5, 0, 0,
+	0, 0, 1, 0, 2, 0, 5, 5, 3, 3,
+	3, 3, 3, 3, 2, 2, 5, 5, 0, 0,
+	0, 0, 0, 1, 0, 2, 5, 5, 5, 5,
+	5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+	0, 0, 0, 0, 0, 0, 5, 5, 5, 5,
+	0, 0, 0, 0, 0, 0, 5, 5, 5, 2,
+	0, 0, 0, 0, 0, 0, 5, 5, 5, 1,
+	5, 5, 5, 5, 5, 5, 5, 5, 5, 0
 };
 //Tile palettes
 const UWORD palettes[] = {
@@ -826,7 +796,6 @@ const UWORD sprite_palettes2[] = {
 	DGREEN, RED, BLACK, GREEN //Card selection
 };
 const UINT8 board_map[] = {
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 0, 91, 92, 91, 92, 91, 92, 133, 91, 92, 0, 91, 92, 91, 92, 91, 92, 0, 0,
 	0, 0, 93, 94, 93, 94, 93, 94, 134, 93, 94, 0, 93, 94, 93, 94, 93, 94, 0, 0,
 	0, 0, 95, 96, 95, 96, 95, 96, 135, 95, 96, 0, 95, 96, 95, 96, 95, 96, 0, 0,
@@ -834,36 +803,6 @@ const UINT8 board_map[] = {
 	0, 0, 91, 92, 91, 92, 91, 92, 91, 92, 91, 92, 91, 92, 91, 92, 91, 92, 0, 0,
 	0, 0, 93, 94, 93, 94, 93, 94, 93, 94, 93, 94, 93, 94, 93, 94, 93, 94, 0, 0,
 	0, 0, 95, 96, 95, 96, 95, 96, 95, 96, 95, 96, 95, 96, 95, 96, 95, 96, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-};
-const UINT8 board_att[] = {
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 };
 const UINT16 chan2_notes[] = {
 	C3, C4, C3, C4, C3, Bb3, C3, Bb3, C3, G3, C3, G3, C3, Bb3, C3, Bb3,
@@ -963,7 +902,7 @@ UINT8 dashboard_map[] = {
 	120, 120, 120, 120, 120, 120, 120, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132
 };
 UINT8 dashboard_att[] = {
-	6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6
+	134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134, 134
 };
 UINT8 dashboard_selected_att[] = {
 	7, 7, 7, 7, 7, 7, 7
@@ -1030,6 +969,12 @@ UINT8 *chan4_note_index = deck;//So it's pointing to a zero
 UINT8 *chan4_delay_index = 0;
 UINT8 chan4_delay = 0;
 UINT8 chan4_repeat = 0;
+//Gets run 60 times per frame on vbl (used for sound)
+void vbl_handler();
+//Fills a section of the screen tiles or attributes with a specified number (ugly but saves a lot of ROM space)
+void fill_with_num();
+//Fills a section of the window screen tiles or attributes with a specified number (ugly but saves a lot of ROM space)
+void fill_win_with_num();
 //Moves all sprites to a specified location with proper offsets based on sprite_layer_count
 void move_sprites(UINT8, UINT8);
 //Slightly misleading, returns nothing, prepares card graphical information for use in several areas
@@ -1064,12 +1009,16 @@ void place_cards();
 void return_cards();
 //Stacks 4 dragons on a certain spot
 void stack_dragons();
+//Copies the card back to the current card array
+void copy_back_to_current_card();
+//Gets the texture of the current suit stack during the win animation
+void get_suit_stack_card();
+//Does the card dropping win animation
+void win_animation();
 //Makes a beautiful win counter :)
 void update_win_counter();
 //Transfers context to the dashboard
 void use_dashboard();
-//Gets run 60 times per frame on vbl (used for sound)
-void vbl_handler();
 //Show instructions
 void show_instructions();
 //Load save data if available
@@ -1086,47 +1035,30 @@ void main(){
 	NR52_REG = 0x80;
 	NR51_REG = 0xFF;
 	NR50_REG = 0x77;
-	set_bkg_palette(0, 1, logo_palettes);
-	set_bkg_data(0, 44, logo_tiles);
-	set_bkg_tiles(3, 5, 14, 7, logo_map);
-	NR21_REG = 0x10;
-	NR22_REG = 0xF3;
-	NR23_REG = MUS_LSIG(D4);
-	NR24_REG = 0x80 | MUS_MSIG(D4);
-	while(1){
-		if(i++ == 30){
-			NR21_REG = 0x10;
-			NR22_REG = 0xF3;
-			NR23_REG = MUS_LSIG(A4);
-			NR24_REG = 0x80 | MUS_MSIG(A4);
-			break;
-		}
-		wait_vbl_done();
-	}
-	set_bkg_palette(0, 1, &(logo_palettes[4]));
-	while(1){
-		if(i++ == 60){
-			NR21_REG = 0x10;
-			NR22_REG = 0xF3;
-			NR23_REG = MUS_LSIG(B4);
-			NR24_REG = 0x80 | MUS_MSIG(B4);
-			break;
-		}
-		wait_vbl_done();
-	}
-	set_bkg_palette(0, 1, &(logo_palettes[8]));
-	while(1){
-		if(i++ == 200) break;
-		wait_vbl_done();
-	}
-	add_VBL(vbl_handler);
 	set_bkg_palette(0, 4, extra_palettes);
 	set_bkg_data(0, 192, menu_tiles);
 	VBK_REG = 1;
-	set_bkg_tiles(0, 0, 20, 18, menu_att);
+	k = 20;
+	l = 6;
+	m = 0;
+	n = 0;
+	o = 0;
+	fill_with_num();
+	o = 10;
+	l = 18;
+	fill_with_num();
+	m = 1;
+	o = 6;
+	l = 8;
+	fill_with_num();
+	m = 2;
+	o = 8;
+	l = 10;
+	fill_with_num();
 	VBK_REG = 0;
-	set_bkg_tiles(0, 0, 20, 18, menu_map);
+	set_bkg_tiles(1, 1, 18, 16, menu_map);
 	set_bkg_palette(0, 4, menu_palettes);
+	add_VBL(vbl_handler);
 	while(1){
 		current_joypad = joypad();
 		if(current_joypad & J_START) break;
@@ -1136,10 +1068,6 @@ void main(){
 	}
 	VBK_REG = 1;
 	for(i = 0; i < 3; i ++){
-		NR11_REG = 0x10;
-		NR12_REG = 0xF1;
-		NR13_REG = MUS_LSIG(F3);
-		NR14_REG = 0x80 | MUS_MSIG(F3);
 		set_bkg_tiles(7, 11, 6, 1, menu_flash_att);
 		for(j = 0; j < 6; j++){
 			wait_vbl_done();
@@ -1162,23 +1090,12 @@ void main(){
 	//Initialize background tiles
 	set_bkg_data(0, 137, tiles);
 	set_sprite_data(0, 137, tiles);
-	//Set up background
-	wait_vbl_done();
-	VBK_REG = 1;
-	set_bkg_tiles(0, 0, 20, 18, board_att);
-	VBK_REG = 0;
-	set_bkg_tiles(0, 0, 20, 18, board_map);
-	//Move window layer
 	update_win_counter();
-	//Initialize palettes
-	set_bkg_palette(0, 8, palettes);
-	set_sprite_palette(0, 6, sprite_palettes);
-	SHOW_WIN;
-	deal();
-	check_automove();
-	cursor_y = stack_heights[0];
-	init_cursor();
+	restart();
 	while(1){
+		wait_vbl_done();
+		last_joypad = current_joypad;
+		random_seed += current_joypad + 1;
 		current_joypad = joypad();
 		if((current_joypad & J_LEFT) != 0 && (last_joypad & J_LEFT) == 0){
 			if(cursor_x > 0){
@@ -1201,7 +1118,6 @@ void main(){
 					if(cursor_y == 0) cursor_y = 1;
 					if(carry_card_count != 0 && stack_heights[cursor_x] != 0) cursor_y++;
 				}
-				move_cursor();
 			}
 		}else if((current_joypad & J_RIGHT) != 0 && (last_joypad & J_RIGHT) == 0){
 			if(cursor_x < 7){
@@ -1226,7 +1142,6 @@ void main(){
 					if(cursor_y == 0) cursor_y = 1;
 					if(carry_card_count != 0 && stack_heights[cursor_x] != 0) cursor_y++;
 				}
-				move_cursor();
 			}
 		}else if((current_joypad & J_UP) != 0 && (last_joypad & J_UP) == 0){
 			if(cursor_y > 1 && carry_card_count == 0){
@@ -1237,27 +1152,22 @@ void main(){
 							cursor_y--;
 						}
 					}
-					move_cursor();
 				}
 			}else if(cursor_y == 0 && cursor_x == 3){
 				if(cursor_button_y > 0){
 					cursor_button_y--;
-					move_cursor();
-			}
+				}
 			}
 		}else if((current_joypad & J_DOWN) != 0 && (last_joypad & J_DOWN) == 0){
 			if(cursor_y != 0){
 				if((current_joypad & J_B) != 0){
 					cursor_y = stack_heights[cursor_x];
-					move_cursor();
 				}else if(cursor_y < stack_heights[cursor_x] && carry_card_count == 0){
 					cursor_y++;
-					move_cursor();
 				}
 			}else if(cursor_x == 3){
 				if(cursor_button_y < 2){
 					cursor_button_y++;
-					move_cursor();
 				}
 			}
 		}else if((current_joypad & J_A) != 0 && (last_joypad & J_A) == 0){
@@ -1287,13 +1197,64 @@ void main(){
 					}else cursor_x = 2;
 				}else if(cursor_x == 4) cursor_x = 5;
 			}
-			move_cursor();
 		}else if((current_joypad & J_START) != 0 && (last_joypad & J_START) == 0){
 			if(carry_card_count == 0) use_dashboard();
+		}else{
+			continue;
 		}
-		last_joypad = current_joypad;
-		random_seed += current_joypad + 1;
-		wait_vbl_done();
+		move_cursor();
+	}
+}
+void vbl_handler(){
+	if(chan2_delay == 0){
+		NR21_REG = 0x10;
+		NR22_REG = 0xF3;
+		NR23_REG = MUS_LSIG(*chan2_note_index);
+		NR24_REG = 0x80 | MUS_MSIG(*(chan2_note_index++));
+		chan2_delay = *(chan2_delay_index++);
+		if(*chan2_note_index == 0){
+			chan2_note_index = chan2_notes;
+			chan2_delay_index = chan2_delays;
+		}
+	}
+	if(chan4_delay == 0){
+		if(*chan4_note_index == 0){
+			if(chan4_repeat > 1){
+				chan4_ptr_index -= 3;
+				chan4_note_index = (UINT8*) *(chan4_ptr_index++);
+				chan4_delay_index = (UINT8*) *(chan4_ptr_index++);
+				chan4_repeat--;
+				chan4_ptr_index++;
+			}else{
+				if(*(chan4_ptr_index) == 0){
+					chan4_ptr_index = chan4_ptrs;
+				}
+				chan4_note_index = *(chan4_ptr_index++);
+				chan4_delay_index = *(chan4_ptr_index++);
+				chan4_repeat = *(chan4_ptr_index++);
+			}
+		}
+		NR41_REG = 0x01;
+		NR42_REG = 0xF1;
+		NR43_REG = *(chan4_note_index++);
+		NR44_REG = 0x80;
+		chan4_delay = *(chan4_delay_index++);
+	}
+	chan2_delay--;
+	chan4_delay--;
+}
+void fill_with_num(){
+	for(i = n; i < k; i ++){
+		for(j = o; j < l; j++){
+			set_bkg_tiles(i, j, 1, 1, &m);
+		}
+	}
+}
+void fill_win_with_num(){
+	for(i = n; i < k; i ++){
+		for(j = o; j < l; j++){
+			set_win_tiles(i, j, 1, 1, &m);
+		}
 	}
 }
 void move_sprites(UINT8 x, UINT8 y){
@@ -1348,6 +1309,7 @@ void get_card(UINT8 card, UINT8 stacked){
 	}else{
 		current_card[1] = 1;
 	}
+	current_card[4] = 2;
 }
 void move_card(UINT8 card){
 	#define start_x a
@@ -1414,10 +1376,27 @@ void restart(){
 		stack_heights[i] = 5;
 	}
 	VBK_REG = 0;
-	set_bkg_tiles(0, 0, 20, 18, board_map);
+	set_bkg_tiles(0, 1, 20, 7, board_map);
+	k = 20;
+	l = 18;
+	m = 0;
+	n = 0;
+	o = 8;
+	fill_with_num();
+	wait_vbl_done();
 	VBK_REG = 1;
-	set_bkg_tiles(0, 0, 20, 18, board_att);
+	i = 1;
+	set_bkg_tiles(8, 1, 1, 1, &i);
+	i = 2;
+	set_bkg_tiles(8, 2, 1, 1, &i);
+	i = 0;
+	set_bkg_tiles(8, 3, 1, 1, &i);
+	o = 5;
+	fill_with_num();
 	game_won = 0;
+	set_bkg_palette(0, 8, palettes);
+	set_sprite_palette(0, 6, sprite_palettes);
+	SHOW_WIN;
 	deal();
 	check_automove();
 	update_dragon_buttons();
@@ -1507,11 +1486,6 @@ void init_cursor(){
 void init_mini_cursor(){
 	sprite_layer_count = 3;
 	set_sprite_prop(0, 5);
-	set_sprite_prop(1, 5);
-	set_sprite_prop(2, 5);
-	set_sprite_prop(3, 5);
-	set_sprite_prop(4, 5);
-	set_sprite_prop(5, 5);
 	set_sprite_tile(0, 136);
 	set_sprite_tile(1, 0);
 	set_sprite_tile(2, 0);
@@ -1681,6 +1655,7 @@ void check_automove(){
 			}
 			update_win_counter();
 			save_game();
+			win_animation();
 			game_won = 1;
 		}
 	}
@@ -1996,6 +1971,143 @@ void stack_dragons(){
 	#undef dest_y
 	#undef first_stack
 }
+void copy_back_to_current_card(){
+	for(j = 0; j < 6; j++){
+		current_card[j] = card_back_map[j];
+	}
+}
+void get_suit_stack_card(){
+	get_card((n << 4) + --suit_stacks[n], 1);
+	//It didn't work when I set it to 0 so I just did it myself :)
+	current_card[0] -= 104;
+	current_card[1] = 1;
+}
+void dec_suit_stack(){
+	get_bkg_tiles(12 + (n << 1), 1, 2, 3, current_card);
+	current_card[0]--;
+	current_card[2] -= 2;
+	current_card[3] -= 2;
+	current_card[5]--;
+	set_bkg_tiles(12 + (n << 1), 1, 2, 3, current_card);
+}
+void win_animation(){
+	#define card_x a
+	#define sprite_n o
+	for(i = 0; i < 40; i++){
+		move_sprite(i, 200, 0);
+	}
+	sprite_n = 0;
+	for(i = 0; i < 40; i++){
+		if(i < 7){
+			card_x = i << 4;
+			if(i > 2){
+				card_x += 8;
+				if(i > 3){
+					card_x += 8;
+					n = i - 4;
+					dec_suit_stack();
+					get_suit_stack_card();
+				}else{
+					set_bkg_tiles(9, 1, 2, 3, empty_slot_map);
+					get_card(0x3A);
+				}
+			}else{
+				copy_back_to_current_card();
+			}
+			card_x += 24;
+		}else if(i < 25){
+			card_x = ((i - 7) % 6);
+			if(card_x > 2){
+				n = card_x - 3;
+				dec_suit_stack();
+				get_suit_stack_card();
+				card_x += 2;
+			}else{
+				copy_back_to_current_card();
+			}
+			card_x <<= 4;
+			card_x += 24;
+			if(i > 18 && i < 22){
+				set_bkg_tiles((i - 18) << 1, 1, 2, 3, empty_slot_map);
+			}
+		}else{
+			card_x = (i - 25) % 3;
+			n = card_x;
+			dec_suit_stack();
+			get_suit_stack_card();
+			card_x <<= 4;
+			card_x += 104;
+			if(i > 36){
+				set_bkg_tiles((i - 31) << 1, 1, 2, 3, empty_slot_map);
+			}
+		}
+		sprite_n += 6;
+		if(sprite_n > 34) sprite_n = 0;
+		for(j = 0; j < 6; j++){
+			move_sprite(sprite_n + j, card_x + ((j % 2) << 3), 24 + ((j >> 1) << 3));
+			set_sprite_tile(sprite_n + j, current_card[j]);
+			set_sprite_prop(sprite_n + j, current_card_att[j]);
+		}
+		wait_vbl_done();
+		for(l = 0; l < 4; l++){
+			for(j = 0; j < 40; j++){
+				u = 0xFE00;
+				u += j << 2;
+				//hacky asm garbage
+				_asm
+				ld	hl, #0xFF41
+				00001$:
+				bit	#1, (hl)
+				jr	z, 00001$
+				00002$:
+				bit #1, (hl)
+				jr 	nz, 00002$
+				_endasm;
+				if (*((UINT8*) u) > 136) {
+					move_sprite(j, 0, 0);
+				} else {
+					scroll_sprite(j, 0, 8);
+				}
+			}
+			wait_vbl_done();
+		}
+	}
+	for(l = 0; l < 20; l++){
+		for(j = 0; j < 40; j++){
+			u = 0xFE00;
+			u += j << 2;
+			//hacky asm garbage
+			_asm
+			ld	hl, #0xFF41
+			00003$:
+			bit	#1, (hl)
+			jr	z, 00003$
+			00004$:
+			bit #1, (hl)
+			jr 	nz, 00004$
+			_endasm;
+			if (*((UINT8*) u) > 136) {
+				move_sprite(j, 0, 0);
+			} else {
+				scroll_sprite(j, 0, 8);
+			}
+		}
+		wait_vbl_done();
+	}/*
+	for(l = 0; l < 10; l++){
+		for(j = 6; j < 30; j++){
+			scroll_sprite(j, 0, 8);
+			b = 0xFE00;
+			b += j << 2;
+			if (*((UBYTE*) b) > 136) {
+				move_sprite(j, 0, 0);
+			}
+		}
+		wait_vbl_done();
+	}*/
+	#undef card_x
+	#undef sprite_n
+}
 void update_win_counter(){
 	wait_vbl_done();
 	VBK_REG = 1;
@@ -2100,9 +2212,17 @@ void show_instructions(){
 	set_bkg_palette(4, 4, extra_palettes);
 	set_bkg_data(0, 143, instructions_tiles);
 	VBK_REG = 1;
-	set_win_tiles(0, 0, 20, 18, instructions_att);
+	k = 20;
+	l = 18;
+	m = 5;
+	n = 0;
+	o = 0;
+	fill_win_with_num();
+	set_win_tiles(1, 1, 10, 12, instructions_att);
 	VBK_REG = 0;
-	set_win_tiles(0, 0, 20, 18, instructions_map);
+	m = 0;
+	fill_win_with_num();
+	set_win_tiles(1, 1, 18, 16, instructions_map);
 	wait_vbl_done();
 	move_win(7, 0);
 	set_bkg_palette(0, 8, palettes);
@@ -2118,44 +2238,6 @@ void show_instructions(){
 	set_bkg_palette(0, 4, extra_palettes);
 	set_bkg_palette(4, 4, extra_palettes);
 	set_bkg_data(0, 137, tiles);
-}
-void vbl_handler(){
-	if(chan2_delay == 0){
-		NR21_REG = 0x10;
-		NR22_REG = 0xF3;
-		NR23_REG = MUS_LSIG(*chan2_note_index);
-		NR24_REG = 0x80 | MUS_MSIG(*(chan2_note_index++));
-		chan2_delay = *(chan2_delay_index++);
-		if(*chan2_note_index == 0){
-			chan2_note_index = chan2_notes;
-			chan2_delay_index = chan2_delays;
-		}
-	}
-	if(chan4_delay == 0){
-		if(*chan4_note_index == 0){
-			if(chan4_repeat > 1){
-				chan4_ptr_index -= 3;
-				chan4_note_index = (UINT8*) *(chan4_ptr_index++);
-				chan4_delay_index = (UINT8*) *(chan4_ptr_index++);
-				chan4_repeat--;
-				chan4_ptr_index++;
-			}else{
-				if(*(chan4_ptr_index) == 0){
-					chan4_ptr_index = chan4_ptrs;
-				}
-				chan4_note_index = *(chan4_ptr_index++);
-				chan4_delay_index = *(chan4_ptr_index++);
-				chan4_repeat = *(chan4_ptr_index++);
-			}
-		}
-		NR41_REG = 0x01;
-		NR42_REG = 0xF1;
-		NR43_REG = *(chan4_note_index++);
-		NR44_REG = 0x80;
-		chan4_delay = *(chan4_delay_index++);
-	}
-	chan2_delay--;
-	chan4_delay--;
 }
 void save_game(){
 	ENABLE_RAM_MBC1;
